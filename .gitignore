@@ -296,6 +296,8 @@ PublishScripts/
 **/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
+# but reinclude FAKE build artifacts
+**/packages/build/FAKE
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignoreable files
@@ -382,6 +384,7 @@ _Pvt_Extensions
 
 # Paket dependency manager
 paket-files/
+.paket/
 
 # FAKE - F# Make
 .fake/
@@ -389,3 +392,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# VS Code ionide plugin
+.ionide/
